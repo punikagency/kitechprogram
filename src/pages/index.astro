@@ -1,4 +1,6 @@
 ---
+import programmes from '../data/programmes.json';
+import Container from '../components/shared/Container.astro';
 ---
 
 <html lang="en">
@@ -7,9 +9,32 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Kids In Tech (KIT'023)</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="w-full h-full">
+		<main class="w-full h-full">
+			<!-- Hero Section -->
+			<section
+				class="w-full h-[60vh] flex flex-col gap-3 justify-center items-center"
+			>
+				<h1>Kids In Tech Program 0'23</h1>
+				<small>Live in Nsukka, Enugu</small>
+			</section>
+
+			<!-- Career Programmes -->
+			<section>
+				<Container className="py-8">
+					<h1>Career Programmes</h1>
+
+					<div class="grid md:grid-cols-2 lg:grid-cols-4">
+						{
+							programmes.map((program) => (
+								<div class="">{program}</div>
+							))
+						}
+					</div>
+				</Container>
+			</section>
+		</main>
 	</body>
 </html>
