@@ -1,6 +1,7 @@
 ---
 import Head from '../components/shared/Head.astro';
 import Header from '../components/elements/Header.astro';
+import Footer from '../components/elements/Footer.astro';
 import '../styles/global.css';
 ---
 
@@ -10,5 +11,7 @@ import '../styles/global.css';
     <body class="w-full h-full">
         <Header />
         <slot />
+
+        <Footer />
     </body>
 </html>

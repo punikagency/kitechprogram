@@ -1,0 +1,23 @@
+---
+import Container from '../shared/Container.astro';
+import metaData from '../../data/meta.json';
+---
+
+<footer class="bg-blue-100 py-4">
+    <Container className="flex space-x-4 justify-center items-center ">
+        {
+            metaData.social.map((s) => (
+                <a href={s.link} target="_blank" class="youTube">
+                    {s.name}
+                </a>
+            ))
+        }
+    </Container>
+</footer>
+
+<style>
+    footer a {
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+</style>
