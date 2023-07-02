@@ -1,6 +1,7 @@
 ---
 import programmes from '../data/programmes.json';
 import Container from '../components/shared/Container.astro';
+import { Typography } from '../components/shared/Typography';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 ---
 
@@ -10,23 +11,48 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 		<section
 			class="bg-blue-700 w-full h-[60vh] flex flex-col gap-3 justify-center items-center"
 		>
-			<h1 class="text-4xl">Kids In Tech Program (KIT'023)</h1>
-			<small>Live in Nsukka, Enugu</small>
-		</section>
-
-		<!-- Career Programmes -->
-		<section>
-			<Container className="py-8">
-				<h1 class="p-3 text-4xl">Career Programmes</h1>
-
-				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-					{
-						programmes.map((program) => (
-							<div class="border-2 px-6 py-3 ">{program}</div>
-						))
-					}
-				</div>
-			</Container>
+			<Typography variant="h1">Kids In Tech Program Summit</Typography>
+			<Typography variant="body">FIRST EDITION</Typography>
+			<Typography variant="h3">(KIT'023)</Typography>
 		</section>
 	</main>
+
+	<!-- Career Programmes -->
+	<section>
+		<Container className="py-8">
+			<Typography variant="h1" className="pb-4 text-center">
+				Career Programmes
+			</Typography>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+				{
+					programmes.map((program) => (
+						<div class="program-card cursor-pointer flex justify-center items-center">
+							{program}
+						</div>
+					))
+				}
+			</div>
+		</Container>
+	</section>
 </DefaultLayout>
+
+<style>
+	.program-card {
+		position: relative;
+		border: 1px solid blue;
+		height: 6rem;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.program-card::after {
+		position: absolute;
+		top: 20px !important;
+		left: 20px;
+		width: 100%;
+		height: 100%;
+		background-color: blue;
+		z-index: 10;
+	}
+</style>

@@ -1,0 +1,22 @@
+---
+import Container from '../shared/Container.astro';
+---
+
+<header class="sticky top-0 left-0 z-50 bg-white">
+    <Container className="flex items-center justify-between py-4">
+        <div class="logo font-black">KITP</div>
+
+        <nav class="flex gap-4 items-center justify-end w-full">
+            <a href="" class="">Apply</a>
+            <a href="" class="">Programmes</a>
+            <a href="" class="">Contact</a>
+        </nav>
+    </Container>
+</header>
+
+<style>
+    nav a {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+</style>
