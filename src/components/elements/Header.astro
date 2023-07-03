@@ -1,5 +1,6 @@
 ---
 import Container from '../shared/Container.astro';
+import { link_to_register } from '../../data/meta.json';
 ---
 
 <header class="sticky top-0 left-0 z-50 bg-white">
@@ -7,7 +8,7 @@ import Container from '../shared/Container.astro';
         <div class="logo font-black">KITechProgram</div>
 
         <nav class="flex gap-4 items-center justify-end w-full">
-            <a href="" class="">Apply</a>
+            <a href={link_to_register} class="">Apply</a>
             <a href="" class="">Programmes</a>
             <a href="" class="">Contact</a>
         </nav>

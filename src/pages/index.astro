@@ -4,6 +4,7 @@ import whykit from '../data/why-chose-kit.json';
 import Container from '../components/shared/Container.astro';
 import { Typography } from '../components/shared/Typography';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { link_to_register } from '../data/meta.json';
 ---
 
 <DefaultLayout>
@@ -22,7 +23,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 				<Typography variant="h3">(KIT'023)</Typography>
 			</div>
 
-			<button>Register now</button>
+			<a href={link_to_register} class="button">Register now</a>
 		</section>
 	</main>
 
@@ -76,7 +77,9 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 				}
 			</div>
 
-			<a href="" class="button w-max flex mx-auto my-4">Register now</a>
+			<a href={link_to_register} class="button w-max flex mx-auto my-4"
+				>Register now</a
+			>
 		</Container>
 	</section>
 </DefaultLayout>
