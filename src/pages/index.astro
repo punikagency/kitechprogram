@@ -5,6 +5,7 @@ import Container from '../components/shared/Container.astro';
 import { Typography } from '../components/shared/Typography';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import { link_to_register } from '../data/meta.json';
+import { Image } from 'astro:assets';
 ---
 
 <DefaultLayout>
@@ -34,11 +35,19 @@ import { link_to_register } from '../data/meta.json';
 				Career Programmes
 			</Typography>
 
-			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
 				{
 					programmes.map((program) => (
-						<div class="program-card cursor-pointer flex justify-center items-center">
-							{program}
+						<div class="program-card cursor-pointer bg-white rounded-2xl shadow-md gap-3 flex flex-col justify-center items-center">
+							<img
+								class="h-80 object-cover w-full rounded-2xl"
+								src={
+									program.imgSrc
+										? `images/${program.imgSrc}`
+										: '/images/placeholder-image.jpeg'
+								}
+							/>
+							<Typography variant="h4">{program.name}</Typography>
 						</div>
 					))
 				}
@@ -87,19 +96,7 @@ import { link_to_register } from '../data/meta.json';
 <style>
 	.program-card {
 		position: relative;
-		border: 1px solid blue;
-		height: 6rem;
 		width: 100%;
 		padding: 20px;
-	}
-
-	.program-card::after {
-		position: absolute;
-		top: 20px !important;
-		left: 20px;
-		width: 100%;
-		height: 100%;
-		background-color: blue;
-		z-index: 10;
 	}
 </style>

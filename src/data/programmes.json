@@ -1,12 +1,15 @@
 [
-  "Web development",
-  "App development",
-  "Creative writing",
-  "Video creation",
-  "Data Sceince",
-  "Graphics Design",
-  "UI/UX Design",
-  "Cybersecurity",
-  "Robotics",
-  "Games development"
+  { "name": "Web development", "imgSrc": "web-dev.png" },
+  { "name": "App development" },
+  { "name": "Creative writing" },
+  {
+    "name": "Video creation"
+  },
+  { "name": "Data Sceince" },
+
+  { "name": "Graphics Design" },
+  { "name": "UI/UX Design" },
+  { "name": "Cybersecurity" },
+  { "name": "Robotics" },
+  { "name": "Games development" }
 ]
