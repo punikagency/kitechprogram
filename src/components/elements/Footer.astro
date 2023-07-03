@@ -1,23 +1,75 @@
 ---
 import Container from '../shared/Container.astro';
 import metaData from '../../data/meta.json';
+import { Typography } from '../shared/Typography';
 ---
 
-<footer class="bg-blue-100 py-4">
-    <Container className="flex space-x-4 justify-center items-center ">
-        {
-            metaData.social.map((s) => (
-                <a href={s.link} target="_blank" class="youTube">
-                    {s.name}
-                </a>
-            ))
-        }
+<footer class="bg-blue-900 py-4">
+    <Container className="">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4">
+            <div class="nav">
+                <Typography variant="h5" className="mb-4 text-gray-500">
+                    KITechProgram
+                </Typography>
+                <ul class="flex flex-col space-y-2 text-gray-300">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Our Vision</a></li>
+                    <li><a href="">Partners</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <Typography variant="h5" className="mb-4 text-gray-500">
+                    Centre
+                </Typography>
+                <ul class="flex flex-col space-y-2 text-gray-300">
+                    <li><a href="">Find a Centre</a></li>
+                    <li><a href="">View all Centre</a></li>
+                    <li><a href="">Become a Centre</a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <Typography variant="h5" className="mb-4 text-gray-500">
+                    Legal
+                </Typography>
+                <ul class="flex flex-col space-y-2 text-gray-300">
+                    <li><a href="">Terms and Conditions</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <Typography variant="h5" className="mb-4 text-gray-500">
+                    Follow us
+                </Typography>
+                <ul class="flex flex-col space-y-2 text-gray-300">
+                    {
+                        metaData.social.map((s) => (
+                            <li>
+                                <a
+                                    href={s.link}
+                                    target="_blank"
+                                    class="youTube"
+                                >
+                                    {s.name}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
     </Container>
+    <div
+        class="flex space-x-4 flex-col text-gray-400 justify-center items-center"
+    >
+        <Typography variant="small">KITechProgram © 2023</Typography>
+        <Typography variant="small">All Rights Reserved.</Typography>
+    </div>
 </footer>
 
 <style>
     footer a {
-        font-size: 0.8rem;
-        font-weight: bold;
+        font-size: 0.9rem;
     }
 </style>

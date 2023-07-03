@@ -1,5 +1,6 @@
 ---
 import programmes from '../data/programmes.json';
+import whykit from '../data/why-chose-kit.json';
 import Container from '../components/shared/Container.astro';
 import { Typography } from '../components/shared/Typography';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
@@ -9,11 +10,19 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 	<main class="w-full h-full">
 		<!-- Hero Section -->
 		<section
-			class="bg-blue-700 w-full h-[60vh] flex flex-col gap-3 justify-center items-center"
+			class="bg-blue-900 text-white bg-[url(/images/hero-bg.jpeg)] bg-no-repeat bg-blend-overlay bg-cover w-full h-[65vh] flex flex-col gap-3 justify-center items-center"
 		>
-			<Typography variant="h1">Kids In Tech Program Summit</Typography>
-			<Typography variant="body">FIRST EDITION</Typography>
-			<Typography variant="h3">(KIT'023)</Typography>
+			<div
+				class="flex flex-col justify-center items-center text-center space-y-4"
+			>
+				<Typography variant="h1">
+					Kids In Tech Program Summit
+				</Typography>
+				<Typography variant="body">FIRST EDITION</Typography>
+				<Typography variant="h3">(KIT'023)</Typography>
+			</div>
+
+			<button>Register now</button>
 		</section>
 	</main>
 
@@ -33,6 +42,41 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 					))
 				}
 			</div>
+		</Container>
+	</section>
+
+	<!-- Why CHOOSE KIT THIS SUMMER FOR YOUR KIDS?-->
+
+	<section>
+		<Container className="py-8">
+			<Typography variant="h1" className="pb-4 text-center">
+				Why KIT'023 Program for your Kid?
+			</Typography>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
+				{
+					whykit.map((why) => (
+						<div class="relative overflow-hidden">
+							<div class="bg-white transform -skew-y-6 px-6 py-8 rounded-lg shadow-lg relative z-10">
+								<Typography
+									variant="h3"
+									className="font-bold text-gray-800 mb-4 transform skew-y-6"
+								>
+									{why.title}
+								</Typography>
+								<Typography
+									variant="body-small"
+									className="text-gray-600 transform skew-y-6"
+								>
+									{why.description}
+								</Typography>
+							</div>
+						</div>
+					))
+				}
+			</div>
+
+			<a href="" class="button w-max flex mx-auto my-4">Register now</a>
 		</Container>
 	</section>
 </DefaultLayout>
