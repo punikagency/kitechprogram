@@ -1,7 +1,7 @@
 [
   { "name": "Web development", "imgSrc": "web-dev.png" },
-  { "name": "App development" },
-  { "name": "Creative writing" },
+  { "name": "App development", "imgSrc": "app-development.avif" },
+  { "name": "Creative writing", "imgSrc": "kids-creative-writing.avif" },
   {
     "name": "Video creation"
   },
