@@ -3,13 +3,14 @@ import Container from '../shared/Container.astro';
 import { link_to_register } from '../../data/meta.json';
 ---
 
-<header class="sticky top-0 left-0 z-50 bg-white">
+<header class="sticky top-0 left-0 z-50 bg-white opacity-90 shadow-md">
     <Container className="flex items-center justify-between py-4">
-        <div class="logo font-black">KITechProgram</div>
+        <div class="logo font-black leading-tight">Kids In Tech Program</div>
 
         <nav class="flex gap-4 items-center justify-end w-full">
-            <a href={link_to_register} class="">Apply</a>
+            <a href={link_to_register} class="">About</a>
             <a href="" class="">Programmes</a>
+            <a href="" class="">Join us</a>
             <a href="" class="">Contact</a>
         </nav>
     </Container>
@@ -19,5 +20,6 @@ import { link_to_register } from '../../data/meta.json';
     nav a {
         margin-left: 1rem;
         font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
     }
 </style>

@@ -5,11 +5,19 @@
   {
     "name": "Video creation"
   },
+  { "name": "Computer Appreciation" },
   { "name": "Data Sceince" },
 
-  { "name": "Graphics Design" },
+  {
+    "name": "Graphics Design",
+    "imgSrc": "Graphics-design-Training-For-Kids.jpeg"
+  },
   { "name": "UI/UX Design" },
+  { "name": "Software Engineering" },
   { "name": "Cybersecurity" },
-  { "name": "Robotics" },
+  {
+    "name": "Robotics",
+    "imgSrc": "Coding-for-Robotics-Training-for-kids.jpeg"
+  },
   { "name": "Games development" }
 ]
