@@ -14,15 +14,13 @@ import { Image } from 'astro:assets';
 		<section
 			class="bg-blue-900 text-white bg-[url(/images/hero-bg.jpeg)] bg-no-repeat bg-blend-overlay bg-cover w-full h-[65vh] flex flex-col gap-3 justify-center items-center"
 		>
-			<div
-				class="flex flex-col justify-center items-center text-center space-y-4"
+			<Container
+				className="flex flex-col justify-center items-center text-center space-y-4"
 			>
-				<Typography variant="h1">
-					Kids In Tech Program Summit
-				</Typography>
+				<Typography variant="h1">KITechProgram Summit</Typography>
 				<Typography variant="body">FIRST EDITION</Typography>
 				<Typography variant="h3">(KIT'023)</Typography>
-			</div>
+			</Container>
 
 			<a href={link_to_register} class="button">Register now</a>
 		</section>
