@@ -1,0 +1,49 @@
+---
+import Container from '../components/shared/Container.astro';
+import { Typography } from '../components/shared/Typography';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout>
+    <main class="w-full h-full flex-col flex">
+        <section class="text-gray-700">
+            <Container
+                className="flex flex-col gap-4 w-full max-w-4xl mx-auto px-8 py-10"
+            >
+                <Typography variant="h2">Call for Volunteers</Typography>
+
+                <Typography variant="body">
+                    Are you passionate about technology and education? Do you
+                    want to make a positive impact in the lives of young
+                    innovators? Join us as a volunteer for the Kids In Tech
+                    Program!
+                </Typography>
+
+                <Typography variant="body">
+                    We are seeking dedicated individuals to fill various
+                    volunteer positions and contribute their skills and
+                    expertise to our program. As a volunteer, you will have the
+                    opportunity to inspire and empower the next generation of
+                    tech enthusiasts through hands-on experiences, mentorship,
+                    and guidance.
+                </Typography>
+
+                <Typography variant="body">
+                    If you have skills and expertise in any of these areas and
+                    are passionate about making a difference, we would love to
+                    have you on our team!
+                </Typography>
+
+                <Typography variant="body">
+                    Together, let's shape the future of technology!
+                </Typography>
+
+                <a
+                    class="button mx-auto w-max"
+                    href="https://forms.gle/9B6Po5cDUK31eogk9"
+                    target="_blank">Volunteer Appilcation</a
+                >
+            </Container>
+        </section>
+    </main>
+</DefaultLayout>
