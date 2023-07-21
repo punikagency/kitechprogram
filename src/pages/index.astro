@@ -57,14 +57,14 @@ import { Image } from 'astro:assets';
 					programmes.map((program) => (
 						<div class="program-card cursor-pointer bg-white rounded-xl shadow-md gap-2 flex flex-col justify-center items-center">
 							<img
-								class="h-80 object-cover w-full rounded-2xl"
+								class="md:h-80 h-60 object-cover w-full rounded-2xl"
 								src={
 									program.imgSrc
 										? `images/${program.imgSrc}`
 										: '/images/placeholder-image.jpeg'
 								}
 							/>
-							<Typography variant="h4">{program.name}</Typography>
+							<Typography variant="h5" className='text-center'>{program.name}</Typography>
 						</div>
 					))
 				}
