@@ -7,9 +7,9 @@ import { link_to_register } from '../../data/meta.json';
     <Container className="flex items-center justify-between py-4">
         <div class="logo font-black leading-tight">KITechProgram</div>
 
-        <nav class="flex gap-2 md:gap-4 items-center justify-end w-full">
-            <a href={link_to_register} target="_blank" class="">About</a>
-            <a href="" class="">Programmes</a>
+        <nav class="flex gap-2 md:gap-4 items-center justify-end w-full text-small md:text-base">
+            <a href={link_to_register} target="_blank" class="md:flex hidden">About</a>
+            <a href="" class="md:flex hidden">Programmes</a>
             <a href="/volunteers" class="">Resources</a>
             <a href="" class="">Contact</a>
         </nav>
